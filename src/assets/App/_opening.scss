@@ -1,0 +1,39 @@
+.opening {
+  @include flexBox(space-around, center, column);
+  @include mainContainer;
+
+  border: 10px solid $first-accent-color;
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background: linear-gradient(304deg, #476491 12%, #3c5274 22%, #1e232b 80%);
+
+  h1 {
+    font-size: calc(20px + 2vmin);
+    margin: 2rem 0 1rem 0;
+    max-width: 70vw;
+  }
+
+  h2 {
+    font-size: calc(10px + 2vmin);
+    margin: 2rem;
+    max-width: 70vw;
+  }
+
+  button {
+    font-size: calc(6px + 2vmin);
+    min-width: 15vw;
+    min-height: 5vh;
+    background-color: $first-accent-color;
+    color: $second-accent-color;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #ee2005,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: #c73305;
+    }
+  }
+}

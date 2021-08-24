@@ -1,0 +1,13 @@
+@mixin flexBox($justifyContent, $alignItems, $flexDirection) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}
+
+@mixin mainContainer() {
+  min-height: 70vh;
+  min-width: 70vw;
+  border-radius: 50px;
+  font-family: "Risque" cursive;
+}

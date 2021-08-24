@@ -1,0 +1,45 @@
+.app-main {
+  @include flexBox(space-around, center, column);
+  @include mainContainer;
+
+  background: linear-gradient(20deg, #e36a39 40%, #e0a31d 100%);
+}
+
+.app-main p {
+  background-color: #1e232b;
+  min-height: 8vh;
+  width: 40vw;
+  font-size: 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: monospace;
+}
+.character {
+  white-space: pre;
+}
+
+.character-current {
+  background-color: rgba(255, 255, 255, 0.377);
+  color: $first-accent-color;
+}
+
+.character-out {
+  color: #e3693969;
+}
+
+.incoming-chars {
+  color: $first-accent-color;
+}
+
+.result {
+  min-width: 40vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.app-main h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: left;
+}

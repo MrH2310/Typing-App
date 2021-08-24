@@ -1,0 +1,53 @@
+.add-text {
+  @include flexBox(center, center, column);
+  @include mainContainer;
+
+  background: linear-gradient(20deg, #e36a39 40%, #e0a31d 100%);
+  font-family: "Risque", cursive;
+  font-size: 2rem;
+
+  label {
+    margin: 1.25vh 0;
+  }
+
+  input {
+    min-width: 50vw;
+    background: linear-gradient(304deg, #1e232b 32%, #3c5274 62%, #476491 70%);
+    border: none;
+    border-radius: 20px;
+    padding: 2vh 2vw;
+    color: #fffefe;
+    font-family: $main-font;
+  }
+
+  textarea {
+    background: linear-gradient(304deg, #476491 12%, #3c5274 22%, #1e232b 80%);
+    color: #fffefe;
+    margin: 0 3vw 3vh 3vw;
+    padding: 2vh 2vw;
+    min-height: 25vh;
+    min-width: 50vw;
+    border-radius: 20px;
+    border: none;
+    font-size: 2rem;
+    font-family: $main-font;
+  }
+
+  button {
+    font-size: calc(6px + 2vmin);
+    font-family: $main-font;
+    min-width: 15vw;
+    min-height: 5vh;
+    background-color: #1e232b;
+    color: #fffefe;
+    border: none;
+    border-radius: 20px;
+    margin-top: -15px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: black;
+    }
+  }
+}

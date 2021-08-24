@@ -1,0 +1,68 @@
+.entry {
+  @include flexBox(space-evenly, center, column);
+  @include mainContainer;
+  background: linear-gradient(20deg, #e36a39 40%, #e0a31d 100%);
+  flex-wrap: wrap;
+  font-family: $main-font;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    background: linear-gradient(304deg, #3c5274 10%, #1e232b 70%);
+    min-width: 40vw;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding: 0 5px;
+  }
+
+  button {
+    font-family: $main-font;
+    font-size: calc(6px + 2vmin);
+    min-width: 20vw;
+    min-height: 6vh;
+    background-color: $main-color;
+    color: $second-accent-color;
+    border: none;
+    border-radius: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: black;
+    }
+  }
+
+  .delete-challenge {
+    position: relative;
+    max-width: 2vw;
+    max-height: 2vh;
+  }
+  .bottom-container {
+    @include flexBox(space-between, center, row);
+    min-width: 50vw;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.challenges-box {
+  @include flexBox(space-between, space-between, row);
+  flex-wrap: wrap;
+  max-height: 25vh;
+  max-width: 50vw;
+
+  .challenge {
+    max-width: 3vw;
+    max-height: 3vh;
+    border: 1px solid rgba(255, 0, 0, 0.562);
+    font-size: 1rem;
+    margin: 3px;
+  }
+}
