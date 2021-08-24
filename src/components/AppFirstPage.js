@@ -41,8 +41,8 @@ const handleDelete = (id) =>{
                     <button className="delete-challenge" onClick={()=> handleDelete(text.id)} >X</button>
                     </>
                 })}
-                </div>
             </div>
+        </div>
             
             <div className="bottom-container">
                 <div>
@@ -56,7 +56,6 @@ const handleDelete = (id) =>{
             </div>
             <p><span style={{color:"rgb(25, 216, 19)"}}>Choosen challenge:</span> {challenge}</p>
         </div>
-        
         </>
     ) : <p>Loading data...</p>
 };
