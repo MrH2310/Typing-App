@@ -1,0 +1,15 @@
+.go-back {
+  color: $main-color;
+  background-color: inherit;
+  border: none;
+  position: relative;
+  right: 40%;
+  top: -9%;
+  font-family: $main-font;
+  font-size: 1.25vw;
+  transition: transform 0.4;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

@@ -19,28 +19,21 @@
     padding: 0 5px;
   }
 
-  button {
+  a {
+    text-decoration: none;
     font-family: $main-font;
     font-size: calc(6px + 2vmin);
-    min-width: 20vw;
-    min-height: 6vh;
     background-color: $main-color;
     color: $second-accent-color;
-    border: none;
     border-radius: 20px;
     transition: transform 0.3s;
+    padding: 0.5rem 4rem;
 
     &:hover {
-      transform: scale(1.2);
       background-color: black;
     }
   }
 
-  .delete-challenge {
-    position: relative;
-    max-width: 2vw;
-    max-height: 2vh;
-  }
   .bottom-container {
     @include flexBox(space-between, center, row);
     min-width: 50vw;
@@ -50,19 +43,50 @@
       margin-bottom: 0.5rem;
     }
   }
-}
 
-.challenges-box {
-  @include flexBox(space-between, space-between, row);
-  flex-wrap: wrap;
-  max-height: 25vh;
-  max-width: 50vw;
+  .top-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 50vw;
+    max-height: 34vh;
 
-  .challenge {
-    max-width: 3vw;
-    max-height: 3vh;
-    border: 1px solid rgba(255, 0, 0, 0.562);
-    font-size: 1rem;
-    margin: 3px;
+    .challenges-box {
+      @include flexBox(center, flex-start, row);
+      flex-wrap: wrap;
+      max-height: 25vh;
+      max-width: 25vw;
+
+      .challenge {
+        border: 1px solid rgba(30, 255, 0, 0.562);
+        font-family: $main-font;
+        font-size: calc(6px + 2vmin);
+        background-color: $main-color;
+        color: $second-accent-color;
+        border: none;
+        border-radius: 20px;
+        transition: transform 0.3s;
+        margin: 0.25rem;
+        padding: 0.25rem;
+        max-width: 20vw;
+        max-height: 10vh;
+
+        &:hover {
+          transform: scale(1.2);
+          background-color: black;
+        }
+      }
+
+      .delete-challenge {
+        background-color: rgba(197, 21, 21, 0.788);
+        border: none;
+        color: $second-accent-color;
+        margin: 0.25rem;
+        border-radius: 20px;
+        max-width: 5vw;
+        max-height: 5vh;
+        padding: 10px;
+      }
+    }
   }
 }

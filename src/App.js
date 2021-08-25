@@ -17,7 +17,7 @@ function App() {
       <header className="App-header">
         <p><span>Typing</span> master App</p>
       </header>
-      <BrowserRouter>
+        <BrowserRouter>
         <Switch>
         <Route exact path ='/' component={Opening}/>
         <Route exact path ='/first/page' component={AppFirstPage}/>

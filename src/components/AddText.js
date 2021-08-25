@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { useHistory } from "react-router";
 
+import PreviousPage from "./PreviousPage";
+
 const AddText = () => {
     const [title, setTitle] = useState("");
     const [sentence, setSentence] = useState("");
@@ -28,13 +30,18 @@ const AddText = () => {
         .then(() => history.push("/first/page"))
     }
 
-    return <form onSubmit={handleChange} className="add-text">
+    return (
+        <>
+            <form onSubmit={handleChange} className="add-text">
+                <PreviousPage/>
                 <label htmlFor="title">Title:</label>
                 <input value={title} type="text" onChange={(e)=> setTitle(e.target.value)}></input>
                 <label htmlFor="text">Your text:</label>
                 <textarea spellCheck="false" value={sentence} type="text" onChange={(e)=> setSentence(e.target.value)}></textarea>
-                <button type="submit">Add your text</button>
+                <button className='add-text-button' type="submit">Add your text</button>
             </form>
+        </>
+    )        
 };
 
 export default AddText;

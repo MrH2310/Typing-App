@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
+import PreviousPage from "./PreviousPage";
 
 const AppFirstPage = () => {
 
@@ -32,26 +33,26 @@ const handleDelete = (id) =>{
     return texts ?(
         <>
         <div className="entry">
-            <div className="top-container">
+            <PreviousPage/>
             <h2>1. Choose challenge:</h2>
-            <div className="challenges-box" >
+            <div className="top-container">
                 {texts.map(text => {
-                    return <>
-                    <button className="challenge" value={challenge} key={text.id} onClick={handleChooseChallenge(text)}>{text.title}</button>
-                    <button className="delete-challenge" onClick={()=> handleDelete(text.id)} >X</button>
-                    </>
+                    return (
+                        <div className="challenges-box" >
+                            <button className="challenge" value={challenge} key={text.id} onClick={handleChooseChallenge(text)}>{text.title}</button>
+                            <button className="delete-challenge" onClick={() => handleDelete(text.id)}>X</button>
+                        </div>
+                    )    
                 })}
             </div>
-        </div>
-            
             <div className="bottom-container">
                 <div>
                     <h3>2. Want new challenge?</h3>
-                    <Link to='/app/add-text'><button> Add new text </button></Link>
+                    <Link to='/app/add-text'> Add new text</Link>
                 </div>
                 <div>
                     <h3>3. Let's start?</h3>
-                    <Link to={`/app/typing/${challengeID}`}><button>Start <span>typing</span></button></Link>
+                    <Link to={`/app/typing/${challengeID}`}>Start <span>typing</span></Link>
                 </div>
             </div>
             <p><span style={{color:"rgb(25, 216, 19)"}}>Choosen challenge:</span> {challenge}</p>

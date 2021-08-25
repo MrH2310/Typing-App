@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
-import useKeyPress from "./useKeyPress";
 import { useParams } from "react-router";
+
+import useKeyPress from "./useKeyPress";
+import PreviousPage from "./PreviousPage";
+
 
 const AppTyping = () => {
     const [type, setType] = useState("")
@@ -70,6 +73,7 @@ const AppTyping = () => {
 
     return(
         <div className="app-main">  
+            <PreviousPage/>
             <p className="character">
                 <span className="character-out">
                     {(leftPadding + outgoingChars).slice(-4)}
