@@ -8,7 +8,7 @@ const PreviousPage = () => {
     };
 
     return (
-    <button className='go-back' onClick={goBackHandle}>Go back</button>
+    <button className='go-back' onClick={goBackHandle}>Previous page</button>
     )
 };
 

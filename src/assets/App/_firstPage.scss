@@ -15,7 +15,7 @@
     background: linear-gradient(304deg, #3c5274 10%, #1e232b 70%);
     min-width: 40vw;
     border-radius: 5px;
-    margin-top: 2rem;
+    margin: 3rem 0;
     padding: 0 5px;
   }
 
@@ -52,7 +52,7 @@
     max-height: 34vh;
 
     .challenges-box {
-      @include flexBox(center, flex-start, row);
+      @include flexBox(center, flex-start, row-reverse);
       flex-wrap: wrap;
       max-height: 25vh;
       max-width: 25vw;
@@ -72,16 +72,16 @@
         max-height: 10vh;
 
         &:hover {
-          transform: scale(1.2);
+          transform: scale(1.1);
           background-color: black;
         }
       }
 
       .delete-challenge {
-        background-color: rgba(197, 21, 21, 0.788);
+        background-color: rgba(223, 11, 11, 0.788);
         border: none;
         color: $second-accent-color;
-        margin: 0.25rem;
+        margin: 1rem;
         border-radius: 20px;
         max-width: 5vw;
         max-height: 5vh;
