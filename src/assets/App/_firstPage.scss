@@ -52,40 +52,43 @@
     max-height: 34vh;
 
     .challenges-box {
-      @include flexBox(center, flex-start, row-reverse);
+      @include flexBox(space-between, flex-start, row);
       flex-wrap: wrap;
       max-height: 25vh;
-      max-width: 25vw;
+      max-width: 22vw;
+      background-color: $main-color;
+      margin: 0.25rem;
+      border-radius: 20px;
+      padding: 0.25rem;
 
       .challenge {
-        border: 1px solid rgba(30, 255, 0, 0.562);
         font-family: $main-font;
         font-size: calc(6px + 2vmin);
-        background-color: $main-color;
+        background-color: transparent;
         color: $second-accent-color;
         border: none;
         border-radius: 20px;
         transition: transform 0.3s;
-        margin: 0.25rem;
-        padding: 0.25rem;
-        max-width: 20vw;
+        max-width: 19vw;
         max-height: 10vh;
 
         &:hover {
           transform: scale(1.1);
-          background-color: black;
         }
       }
 
       .delete-challenge {
-        background-color: rgba(223, 11, 11, 0.788);
+        font-family: $main-font;
+        background-color: transparent;
         border: none;
-        color: $second-accent-color;
-        margin: 1rem;
-        border-radius: 20px;
-        max-width: 5vw;
-        max-height: 5vh;
-        padding: 10px;
+        color: red;
+        margin-right: 0.5rem;
+        padding: 5px;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.6);
+        }
       }
     }
   }
